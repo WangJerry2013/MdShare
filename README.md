@@ -14,6 +14,8 @@ It is inspired by Hackpad, Etherpad and similar collaborative editors. This
 project originated with the team at [HackMD](https://hackmd.io) and now forked
 into its own organisation. [A longer writeup can be read in the history][history].
 
+> **Default admin account:** `root@hedgedoc.local` / `12345678`
+
 ## Community and Contributions
 
 We welcome contributions! There's a lot to do: If you would like to report bugs,
