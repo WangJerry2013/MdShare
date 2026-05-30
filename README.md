@@ -7,7 +7,7 @@
 [![POEditor][poeditor-image]][poeditor-url]
 [![Mastodon][social-mastodon-image]][social-mastodon]
 
-MdShare lets you create real-time collaborative markdown notes. You can test-drive
+MdShare lets you create real-time collaborative markdown notes, with a built-in **admin console** for user and note management. You can test-drive
 it by visiting our [MdShare demo server][hedgedoc-demo].
 
 It is inspired by Hackpad, Etherpad and similar collaborative editors. This
