@@ -116,7 +116,7 @@
     "Markdown",
     "Notes"
   ],
-  "homepage": "https://github.com/hedgedoc/hedgedoc",
+  "homepage": "https://github.com/WangJerry2013/MdShare",
   "maintainers": [
     {
       "name": "Claudius Coenen",
@@ -134,7 +134,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/hedgedoc/hedgedoc.git"
+    "url": "https://github.com/WangJerry2013/MdShare.git"
   },
   "devDependencies": {
     "@eslint/eslintrc": "3.3.5",
