@@ -129,6 +129,20 @@ these are rarely used for various reasons.
 | `sessionLife`                  | `CMD_SESSION_LIFE`                   | **`14 * 24 * 60 * 60 * 1000`**, `1209600000` (14 days)                  | Cookie session life time in milliseconds.                                                                                                                                                                                                                         |
 | `sessionSecret`                | `CMD_SESSION_SECRET`                 | **`secret`**                                                            | Cookie session secret used to sign the session cookie. If none is set, one will randomly generated on each startup, meaning all your users will be logged out. Can be generated with e.g. `pwgen -s 64 1`.                                                        |
 
+## Admin Console
+
+MdShare includes a built-in **admin console** for managing users and notes. The admin console is available at `/admin` and provides the following features:
+
+- **Dashboard** — Overview of total users, notes, revisions, and recent activity
+- **User Management** — View, create, and manage users (including password changes)
+- **Notes Management** — View all notes with edit counts and timestamps
+
+The default admin account is `root@hedgedoc.local` with password `12345678`. It is recommended to change the default password after first login.
+
+| config file | environment | **default** and example value | description |
+|-------------|-------------|-------------------------------|-------------|
+| `isAdmin`   | (Database)  | **`false`** or `true`         | User role flag. Set to `true` in the database to grant a user admin access to the console. |
+
 ## Login methods
 
 ### Email (local account)
