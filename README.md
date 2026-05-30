@@ -1,20 +1,20 @@
-![HedgeDoc Logo](docs/content/images/hedgedoc_logo_black.svg)
+![MdShare Logo](docs/content/images/hedgedoc_logo_black.svg)
 
-# HedgeDoc
+# MdShare
 
-[![#HedgeDoc on matrix.org][matrix.org-image]][matrix.org-url]
+[![#MdShare on matrix.org][matrix.org-image]][matrix.org-url]
 [![version][github-version-badge]][github-release-page]
 [![POEditor][poeditor-image]][poeditor-url]
 [![Mastodon][social-mastodon-image]][social-mastodon]
 
-HedgeDoc lets you create real-time collaborative markdown notes. You can test-drive
-it by visiting our [HedgeDoc demo server][hedgedoc-demo].
+MdShare lets you create real-time collaborative markdown notes. You can test-drive
+it by visiting our [MdShare demo server][hedgedoc-demo].
 
 It is inspired by Hackpad, Etherpad and similar collaborative editors. This
 project originated with the team at [HackMD](https://hackmd.io) and now forked
 into its own organisation. [A longer writeup can be read in the history][history].
 
-[![HedgeDoc 1.7.0 with its feature demonstration page open](public/screenshot.png)][hedgedoc-demo-features]
+[![MdShare 1.7.0 with its feature demonstration page open](public/screenshot.png)][hedgedoc-demo-features]
 
 ## Community and Contributions
 
@@ -31,7 +31,7 @@ regular [community calls][hedgedoc-community-calls] ([RSS](https://community.hed
 
 ## Installation / Upgrading
 
-You can run HedgeDoc in a number of ways, and we created setup instructions for
+You can run MdShare in a number of ways, and we created setup instructions for
 all of these:
 
 - [Docker][setup-docker]
@@ -42,10 +42,10 @@ all of these:
 
 ## Configuration
 
-Theres two main ways to [configure][configuration] your HedgeDoc instance:
+Theres two main ways to [configure][configuration] your MdShare instance:
 config file or environment variables. You can choose what works best for you.
 
-HedgeDoc can integrate with
+MdShare can integrate with
 
 - facebook, twitter, github, gitlab, mattermost, dropbox, google, ldap, saml and [oauth2][configuration-oauth] **for login**
 - imgur, s3, minio, azure **for image/attachment storage** (files can also be local!)
@@ -55,7 +55,7 @@ More info about that can be found in the configuration docs above.
 
 ## Browser support
 
-To use HedgeDoc, your browser should match or exceed these versions:
+To use MdShare, your browser should match or exceed these versions:
 
 - ![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/HEAD/src/chrome/chrome_24x24.png) Chrome >= 47, ![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/HEAD/src/chrome/chrome_24x24.png) Chrome for Android >= 47
 - ![Safari](https://raw.githubusercontent.com/alrra/browser-logos/HEAD/src/safari/safari_24x24.png) Safari >= 10.1, ![iOS Safari](https://raw.githubusercontent.com/alrra/browser-logos/HEAD/src/safari-ios/safari-ios_24x24.png) iOS Safari >= 10.3
@@ -68,24 +68,24 @@ To use HedgeDoc, your browser should match or exceed these versions:
 
 ## Backup/restore your instance
 
-To backup HedgeDoc, you should:
+To backup MdShare, you should:
 
 - backup your database
 - backup your custom config file if you have one
 - backup the upload folder (see the [uploadsPath][configuration-paths] config directive) 
 
-Restoring an existing instance of HedgeDoc is then just a matter of restoring these elements.
+Restoring an existing instance of MdShare is then just a matter of restoring these elements.
 
 ## Related Tools
 
 Our community has created related tools, we'd like to highlight [hedgedoc-cli](https://github.com/hedgedoc/cli)
-which lets you use HedgeDoc from the comfort of your command line.
+which lets you use MdShare from the comfort of your command line.
 
 ## License
 
 Licensed under AGPLv3. For our list of contributors, see [AUTHORS](AUTHORS).
 
-The license does not include the HedgeDoc logo, whose terms of usage can be found in the [github repository](https://github.com/hedgedoc/hedgedoc-logo).
+The license does not include the MdShare logo, whose terms of usage can be found in the [github repository](https://github.com/hedgedoc/hedgedoc-logo).
 
 [configuration-oauth]: https://docs.hedgedoc.org/configuration/#oauth2-login
 [configuration]: https://docs.hedgedoc.org/configuration/

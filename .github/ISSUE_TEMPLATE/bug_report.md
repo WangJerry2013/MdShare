@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Create a report to help us improve HedgeDoc.
+about: Create a report to help us improve MdShare.
 title: ''
 labels: 'type: bug'
 assignees: ''
@@ -32,7 +32,7 @@ assignees: ''
 **Your Setup (please complete the following information):**
  - Host OS: [e.g. Ubuntu 20.04]
  - NodeJS version [run `node --version`]
- - HedgeDoc version (Click "Version info" in the footer)
+ - MdShare version (Click "Version info" in the footer)
      - server [e.g. 2.0]
      - client [e.g. 2.0]
 

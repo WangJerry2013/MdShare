@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <%- include('../includes/favicon') %>
+    <base href="<%- serverURL %>/">
+    <title><%= __('Notes') %> - <%= __('Admin Console') %> - MdShare</title>
+    <%- include('../build/index-pack-header') %>
+    <style>
+        .admin-container { padding: 80px 20px 20px; max-width: 1200px; margin: 0 auto; }
+        .batch-actions { margin-bottom: 12px; }
+        .batch-actions .btn { margin-right: 6px; }
+    </style>
+    <script>
+        function toggleAll(src) {
+            var checkboxes = document.getElementsByName('selectedIds');
+            for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = src.checked;
+            }
+        }
+        function confirmBatchDelete() {
+            var checked = document.querySelectorAll('input[name="selectedIds"]:checked');
+            if (checked.length === 0) {
+                alert('<%= __('Please select at least one item.') %>');
+                return false;
+            }
+            return confirm('<%= __('Are you sure you want to delete the selected items?') %>');
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="<%- serverURL %>/admin" style="font-weight:600;">MdShare <small style="font-size:12px;color:#999;"><%= __('Admin Console') %></small></a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="<%- serverURL %>/admin"><i class="fa fa-dashboard"></i> <%= __('Dashboard') %></a></li>
+                <li><a href="<%- serverURL %>/admin/users"><i class="fa fa-users"></i> <%= __('Users') %></a></li>
+                <li class="active"><a href="<%- serverURL %>/admin/notes"><i class="fa fa-file-text"></i> <%= __('Notes') %></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="<%- serverURL %>/"><i class="fa fa-arrow-left"></i> <%= __('Back to MdShare') %></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="admin-container">
+        <h4 style="margin-bottom: 16px;"><%= __('All Notes') %> (<%= notes.length %>)</h4>
+        <form method="POST" action="<%- serverURL %>/admin/notes/batch-delete" onsubmit="return confirmBatchDelete()">
+            <div class="batch-actions">
+                <button type="submit" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> <%= __('Delete Selected') %></button>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th style="width:32px;"><input type="checkbox" onchange="toggleAll(this)"></th>
+                        <th><%= __('Title') %></th>
+                        <th><%= __('Owner') %></th>
+                        <th><%= __('Last Editor') %></th>
+                        <th><%= __('Views') %></th>
+                        <th><%= __('Revisions') %></th>
+                        <th><%= __('Permission') %></th>
+                        <th><%= __('Created') %></th>
+                        <th><%= __('Updated') %></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if (notes.length === 0) { %>
+                    <tr><td colspan="10" style="text-align:center;color:#999;"><%= __('No notes yet.') %></td></tr>
+                    <% } else { %>
+                    <% notes.forEach(function(note) { %>
+                    <tr>
+                        <td><input type="checkbox" name="selectedIds" value="<%= note.id %>"></td>
+                        <td><a href="<%- serverURL %>/<%= note.shortid || note.id %>" target="_blank" rel="noopener"><%= note.title || __('(untitled)') %></a></td>
+                        <td><%= note.ownerEmail %></td>
+                        <td><%= note.lastEditorEmail %></td>
+                        <td><%= note.viewcount %></td>
+                        <td><%= note.revisionCount %></td>
+                        <td><%= note.permission %></td>
+                        <td><%= note.createdAt %></td>
+                        <td><%= note.updatedAt %></td>
+                        <td>
+                            <a href="<%- serverURL %>/admin/notes/<%= note.id %>/delete" class="btn btn-xs btn-danger" onclick="return confirm('<%= __('Are you sure you want to delete this note?') %>')"><i class="fa fa-trash"></i> <%= __('Delete') %></a>
+                        </td>
+                    </tr>
+                    <% }) } %>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

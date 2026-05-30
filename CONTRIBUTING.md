@@ -1,6 +1,6 @@
-# Contributing to HedgeDoc
+# Contributing to MdShare
 
-HedgeDoc is a volunteer effort.
+MdShare is a volunteer effort.
 We encourage you to pitch in and to help us making this project even better!
 
 Please note we have a [code of conduct][code-of-conduct], please respect it in all your

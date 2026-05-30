@@ -1,5 +1,5 @@
 {
-  "name": "HedgeDoc",
+  "name": "MdShare",
   "version": "1.10.8",
   "description": "The best platform to write and share markdown.",
   "main": "app.js",
@@ -96,6 +96,7 @@
     "sanitize-filename": "1.6.4",
     "scrypt-kdf": "2.0.1",
     "sequelize": "5.22.5",
+    "sharp": "^0.34.5",
     "socket.io": "4.8.3",
     "sqlite3": "5.1.7",
     "store": "2.0.12",
@@ -109,13 +110,13 @@
   "engines": {
     "node": ">=18"
   },
-  "bugs": "https://github.com/hedgedoc/hedgedoc/issues",
+  "bugs": "https://github.com/mdshare/mdshare/issues",
   "keywords": [
     "Collaborative",
     "Markdown",
     "Notes"
   ],
-  "homepage": "https://hedgedoc.org",
+  "homepage": "https://github.com/hedgedoc/hedgedoc",
   "maintainers": [
     {
       "name": "Claudius Coenen",

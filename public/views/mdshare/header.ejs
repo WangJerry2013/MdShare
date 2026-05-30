@@ -13,9 +13,9 @@
             <ul class="dropdown-menu list" role="menu" aria-labelledby="menu">
             </ul>
         </div>
-        <a class="navbar-brand pull-left header-brand" href="<%- serverURL %>/" title="HedgeDoc">
-            <img src="<%- serverURL %>/banner/banner_h_bw.svg" alt="HedgeDoc" class="h-100 no-night">
-            <img src="<%- serverURL %>/banner/banner_h_wb.svg" alt="HedgeDoc" class="h-100 night">
+        <a class="navbar-brand pull-left header-brand" href="<%- serverURL %>/" title="MdShare">
+            <img src="<%- serverURL %>/banner/banner_h_bw.svg?v=2" alt="MdShare" class="h-100 no-night">
+            <img src="<%- serverURL %>/banner/banner_h_wb.svg?v=2" alt="MdShare" class="h-100 night">
         </a>
         <div class="nav-mobile pull-right visible-xs">
             <a data-toggle="dropdown" class="btn btn-link">
@@ -30,6 +30,9 @@
                 </li>
                 <li class="divider"></li>
                 <li class="dropdown-header"><%= __('Extra') %></li>
+                <% if (typeof isAdmin !== 'undefined' && isAdmin) { %>
+                <li role="presentation"><a role="menuitem" class="ui-admin" tabindex="-1" href="<%- serverURL %>/admin"><i class="fa fa-cog fa-fw"></i> <%= __('Console') %></a></li>
+                <% } %>
                 <li role="presentation"><a role="menuitem" class="ui-extra-revision" tabindex="-1" data-toggle="modal" data-target="#revisionModal"><i class="fa fa-history fa-fw"></i> <%= __('Revision') %></a>
                 </li>
                 <li role="presentation"><a role="menuitem" class="ui-extra-slide" tabindex="-1" href="#" target="_blank" rel="noopener"><i class="fa fa-tv fa-fw"></i> <%= __('Slide Mode') %></a>
@@ -132,6 +135,9 @@
                 </a>
                 <ul class="dropdown-menu list" role="menu" aria-labelledby="menu">
                     <li class="dropdown-header"><%= __('Extra') %></li>
+                    <% if (typeof isAdmin !== 'undefined' && isAdmin) { %>
+                    <li role="presentation"><a role="menuitem" class="ui-admin" tabindex="-1" href="<%- serverURL %>/admin"><i class="fa fa-cog fa-fw"></i> <%= __('Console') %></a></li>
+                    <% } %>
                     <li role="presentation"><a role="menuitem" class="ui-extra-revision" tabindex="-1" data-toggle="modal" data-target="#revisionModal"><i class="fa fa-history fa-fw"></i> <%= __('Revision') %></a>
                     </li>
                     <li role="presentation"><a role="menuitem" class="ui-extra-slide" tabindex="-1" href="#" target="_blank" rel="noopener"><i class="fa fa-tv fa-fw"></i> <%= __('Slide Mode') %></a>

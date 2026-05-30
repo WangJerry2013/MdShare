@@ -1,14 +1,14 @@
 {
-    "name": "HedgeDoc",
+    "name": "MdShare",
     "description": "The best platform to write and share markdown.",
     "keywords": [
         "Collaborative",
         "Markdown",
         "Notes"
     ],
-    "website": "https://hedgedoc.org",
+    "website": "",
     "repository": "https://github.com/hedgedoc/hedgedoc",
-    "logo": "https://github.com/hedgedoc/hedgedoc-logo/raw/main/LOGOTYPE/PNG/HedgeDoc-Logo%201.png",
+    "logo": "",
     "success_url": "/",
     "env": {
         "NPM_CONFIG_PRODUCTION": {

@@ -15,6 +15,7 @@ backups/
 *.pid
 *.log
 *.sqlite
+*.db
 
 # ignore config files
 config.json

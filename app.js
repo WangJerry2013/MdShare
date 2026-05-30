@@ -66,7 +66,7 @@ if (!config.useSSL && config.protocolUseSSL) {
 
 // check if the request is from container healthcheck
 function isContainerHealthCheck (req, _) {
-  return req.headers['user-agent'] === 'hedgedoc-container-healthcheck/1.0' && req.ip === '127.0.0.1'
+  return req.headers['user-agent'] === 'mdshare-container-healthcheck/1.0' && req.ip === '127.0.0.1'
 }
 
 // logger
@@ -85,9 +85,10 @@ if (config.enableStatsApi) {
 const io = new Server(server, {
   pingInterval: config.heartbeatInterval,
   pingTimeout: config.heartbeatTimeout,
+  transports: ['polling'],
   cookie: false,
   cors: {
-    origin: config.serverURL,
+    origin: '*',
     methods: ['GET', 'POST'],
     credentials: true
   }
@@ -264,6 +265,7 @@ app.use(require('./lib/web/auth'))
 app.use(require('./lib/web/historyRouter'))
 app.use(require('./lib/web/userRouter'))
 app.use(require('./lib/web/imageRouter'))
+app.use(require('./lib/web/admin'))
 app.use(require('./lib/web/note/router'))
 
 // response not found if no any route matxches
@@ -352,7 +354,7 @@ function handleTermSignals () {
     logger.info('Forcefully exiting.')
     process.exit(1)
   }
-  logger.info('HedgeDoc has been killed by signal, try to exit gracefully...')
+  logger.info('MdShare has been killed by signal, try to exit gracefully...')
   alreadyHandlingTermSignals = true
   realtime.maintenance = true
   // disconnect all socket.io clients
