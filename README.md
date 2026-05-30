@@ -1,4 +1,4 @@
-![MdShare Logo](docs/content/images/hedgedoc_logo_black.svg)
+![MdShare Logo](public/banner/banner_h_bw.svg)
 
 # MdShare
 
@@ -13,8 +13,6 @@ it by visiting our [MdShare demo server][hedgedoc-demo].
 It is inspired by Hackpad, Etherpad and similar collaborative editors. This
 project originated with the team at [HackMD](https://hackmd.io) and now forked
 into its own organisation. [A longer writeup can be read in the history][history].
-
-[![MdShare 1.7.0 with its feature demonstration page open](public/screenshot.png)][hedgedoc-demo-features]
 
 ## Community and Contributions
 
