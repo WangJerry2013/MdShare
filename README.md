@@ -81,7 +81,7 @@ which lets you use MdShare from the comfort of your command line.
 
 ## License
 
-Licensed under AGPLv3. For our list of contributors, see [AUTHORS](AUTHORS).
+Licensed under AGPLv3.
 
 The license does not include the MdShare logo, whose terms of usage can be found in the [github repository](https://github.com/hedgedoc/hedgedoc-logo).
 
